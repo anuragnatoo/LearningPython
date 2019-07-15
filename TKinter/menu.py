@@ -1,0 +1,17 @@
+from tkinter import *
+window =Tk()
+mainmenu = Menu(window)
+window.config(menu=mainmenu)
+filemenu=Menu(mainmenu)
+def test():
+    print("Check!")
+mainmenu.add_cascade(label="File",menu=filemenu)
+filemenu.add_command(label="Open",command=test)
+filemenu.add_command(label="Save",command=test)
+filemenu.add_command(label="Close",command=test)
+editmenu=Menu(mainmenu)
+mainmenu.add_cascade(label="Edit",menu=editmenu)
+editmenu.add_command(label="Undo")
+editmenu.add_command(label="Redo")
+mainmenu.add_command(label="Help")
+window.mainloop()
